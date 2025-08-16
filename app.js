@@ -5,7 +5,7 @@ let amigos = []
 function adicionarAmigo() {
     //função para adicionar Amigos na lista para sorteio
     //Mudança do nome da variável para armazenar a lista dos sorteados: de listaAmigos para amigosParaSorteio
-    amigosParaSorteio = document.querySelector("input").value.trim(); // Remove espaços em branco no início e fim
+    amigosParaSorteio = document.querySelector("input").value;
     
     //Validação = Não Aceitar campo vazio
     if(amigosParaSorteio === ""){
