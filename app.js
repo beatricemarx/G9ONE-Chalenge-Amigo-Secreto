@@ -4,12 +4,17 @@ let amigos = []
 
 function adicionarAmigo() {
     //função para adicionar Amigos na lista para sorteio
-
-    listaAmigos = document.querySelector("input").value;
-    amigos.push(listaAmigos)
-    console.log(amigos)
-    return listaAmigos
+    //Mudança do nome da variável para armazenar a lista dos sorteados: de ListaAmigos para AmigosParaSorteio
+    AmigosParaSorteio = document.querySelector("input").value;
+    amigos.push(AmigosParaSorteio);
+    exibirAmigos ();
+    console.log(amigos);
+    return AmigosParaSorteio; 
+}
+ 
+function exibirAmigos () {
+    // função para exibir Nomes de Amigos Na tela
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = (amigos);
 }
 
-
-//console.log(amigos);
