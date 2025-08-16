@@ -5,11 +5,22 @@ let amigos = []
 function adicionarAmigo() {
     //função para adicionar Amigos na lista para sorteio
     //Mudança do nome da variável para armazenar a lista dos sorteados: de listaAmigos para amigosParaSorteio
-    amigosParaSorteio = document.querySelector("input").value;
-    amigos.push(amigosParaSorteio);
-    exibirAmigos ();
-    console.log(amigos);
-    return amigosParaSorteio; 
+    amigosParaSorteio = document.querySelector("input").value.trim(); // Remove espaços em branco no início e fim
+    
+    //Validação = Não Aceitar campo vazio
+    if(amigosParaSorteio === ""){
+        alert ("Por favor insira um nome!");
+
+    } else {
+        if (amigosParaSorteio === " "){
+            alert ("Por favor insira um nome!");
+        } else {
+            amigos.push(amigosParaSorteio);
+            exibirAmigos ();
+            console.log(amigos);
+            return amigosParaSorteio; 
+        }
+    }
 }
  
 function exibirAmigos () {
