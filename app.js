@@ -17,8 +17,9 @@ function adicionarAmigo() {
         } else {
             amigos.push(amigosParaSorteio);
             exibirAmigos ();
+            limparCampoAmigos()
             console.log(amigos);
-            return amigosParaSorteio; 
+            return amigosParaSorteio;  
         }
     }
 }
@@ -29,3 +30,8 @@ function exibirAmigos () {
     lista.innerHTML = (amigos);
 }
 
+function limparCampoAmigos() {
+    //função para limpar a tela depois de inseriod o nome
+    amigosParaSorteio = document.querySelector("input");
+    amigosParaSorteio.value = "";   
+}
