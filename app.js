@@ -56,5 +56,5 @@ function sortearAmigo(){
 function exibirAmigosSorteado () {
     // função para exibir Nome do Amigo Sorteado Na tela
     let lista = document.getElementById("resultado");
-    lista.innerHTML = (`O nome do(a) Amigo(a) soretado foi: ${amigoSorteado}`);
+    lista.innerHTML = (`O nome do(a) Amigo(a) sorteado(a) foi: ${amigoSorteado}`);
 }
