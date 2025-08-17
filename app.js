@@ -1,12 +1,13 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
-let amigos = []
+let amigos = [];
+let amigoSorteado =[]
 
 function adicionarAmigo() {
     //função para adicionar Amigos na lista para sorteio
     //Mudança do nome da variável para armazenar a lista dos sorteados: de listaAmigos para amigosParaSorteio
     amigosParaSorteio = document.querySelector("input").value;
-    
+
     //Validação = Não Aceitar campo vazio
     if(amigosParaSorteio === ""){
         alert ("Por favor insira um nome!");
@@ -31,7 +32,17 @@ function exibirAmigos () {
 }
 
 function limparCampoAmigos() {
-    //função para limpar a tela depois de inseriod o nome
+    //função para limpar a tela depois de inserido o nome
     amigosParaSorteio = document.querySelector("input");
     amigosParaSorteio.value = "";   
 }
+
+function sortearAmigo(){
+   
+    //função para sortear um nome: criar um índice aleatório e correlacionar com nome na mesma posição no array amigos
+    let resultadoSorteio =  Math.floor(Math.random() * amigos.length);
+    amigoSorteado = amigos[resultadoSorteio];
+    console.log(resultadoSorteio);
+    console.log(amigoSorteado);
+}
+
