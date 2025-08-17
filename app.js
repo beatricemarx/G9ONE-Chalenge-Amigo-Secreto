@@ -4,6 +4,10 @@ let amigos = [];
 let amigoSorteado =[];
 
 function adicionarAmigo() {
+    //limpar informações da tela
+    lista = document.getElementById("resultado");
+    lista.innerHTML = "";
+    
     //função para adicionar Amigos na lista para sorteio
     //Mudança do nome da variável para armazenar a lista dos sorteados: de listaAmigos para amigosParaSorteio
     amigosParaSorteio = document.querySelector("input").value;
@@ -38,7 +42,6 @@ function limparCampoAmigos() {
 }
 
 function sortearAmigo(){
-    
     //verificar se amigos não está vazio antes de realizar o sorteio
     if(amigos!= ""){
         //função para sortear um nome: criar um índice aleatório e correlacionar com nome na mesma posição no array amigos
@@ -47,9 +50,9 @@ function sortearAmigo(){
         console.log(resultadoSorteio);
         console.log(amigoSorteado);
         exibirAmigosSorteado();
-
+        
     } else {
-        alert ("Nenhum nome foi adicionado. Para sortear, adicione o nome dos seus Amigos!")
+        alert ("Nenhum nome foi adicionado. Para sortear, adicione o nome dos seus Amigos!");
     }
 }
 
@@ -57,4 +60,18 @@ function exibirAmigosSorteado () {
     // função para exibir Nome do Amigo Sorteado Na tela
     let lista = document.getElementById("resultado");
     lista.innerHTML = (`O nome do(a) Amigo(a) sorteado(a) foi: ${amigoSorteado}`);
+}
+
+function reiniciarSorteio() {
+    //função para reiniciar o Jogo
+    if(amigos!= ""){
+        amigos =[]
+        lista = document.getElementById("listaAmigos");
+        lista.innerHTML = "";
+        lista = document.getElementById("resultado");
+        lista.innerHTML = (`Jogo Reiniciado. Insira novos nomes!`);
+
+    } else {
+        alert ("Nenhum nome foi adicionado. Para jogar, adicione o nome dos seus Amigos!");
+    }
 }
