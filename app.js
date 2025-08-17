@@ -1,7 +1,7 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
 let amigos = [];
-let amigoSorteado =[]
+let amigoSorteado =[];
 
 function adicionarAmigo() {
     //função para adicionar Amigos na lista para sorteio
@@ -18,7 +18,7 @@ function adicionarAmigo() {
         } else {
             amigos.push(amigosParaSorteio);
             exibirAmigos ();
-            limparCampoAmigos()
+            limparCampoAmigos();
             console.log(amigos);
             return amigosParaSorteio;  
         }
