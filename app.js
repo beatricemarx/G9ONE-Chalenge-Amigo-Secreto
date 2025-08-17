@@ -46,9 +46,15 @@ function sortearAmigo(){
         amigoSorteado = amigos[resultadoSorteio];
         console.log(resultadoSorteio);
         console.log(amigoSorteado);
+        exibirAmigosSorteado();
 
     } else {
-        alert ("Inserir nome dos Amigos!")
+        alert ("Nenhum nome foi adicionado. Para sortear, adicione o nome dos seus Amigos!")
     }
 }
 
+function exibirAmigosSorteado () {
+    // função para exibir Nome do Amigo Sorteado Na tela
+    let lista = document.getElementById("resultado");
+    lista.innerHTML = (`O nome do(a) Amigo(a) soretado foi: ${amigoSorteado}`);
+}
