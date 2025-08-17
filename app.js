@@ -38,11 +38,17 @@ function limparCampoAmigos() {
 }
 
 function sortearAmigo(){
-   
-    //função para sortear um nome: criar um índice aleatório e correlacionar com nome na mesma posição no array amigos
-    let resultadoSorteio =  Math.floor(Math.random() * amigos.length);
-    amigoSorteado = amigos[resultadoSorteio];
-    console.log(resultadoSorteio);
-    console.log(amigoSorteado);
+    
+    //verificar se amigos não está vazio antes de realizar o sorteio
+    if(amigos!= ""){
+        //função para sortear um nome: criar um índice aleatório e correlacionar com nome na mesma posição no array amigos
+        let resultadoSorteio =  Math.floor(Math.random() * amigos.length);
+        amigoSorteado = amigos[resultadoSorteio];
+        console.log(resultadoSorteio);
+        console.log(amigoSorteado);
+
+    } else {
+        alert ("Inserir nome dos Amigos!")
+    }
 }
 
