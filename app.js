@@ -1,6 +1,7 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
 let amigos = [];
+let listaAmigosSorteados = []
 let amigoSorteado =[];
 
 function adicionarAmigo() {
@@ -42,19 +43,32 @@ function limparCampoAmigos() {
 }
 
 function sortearAmigo(){
-    //verificar se amigos não está vazio antes de realizar o sorteio
-    if(amigos!= ""){
-        //função para sortear um nome: criar um índice aleatório e correlacionar com nome na mesma posição no array amigos
-        let resultadoSorteio =  Math.floor(Math.random() * amigos.length);
-        amigoSorteado = amigos[resultadoSorteio];
-        console.log(resultadoSorteio);
-        console.log(amigoSorteado);
-        exibirAmigosSorteado();
-        
+    //Se o tamanho do array Amigos for diferente da lista de Amigos Sorteados continuar o sorteio
+    if (amigos!=""){
+        //verificar se amigos não está vazio antes de realizar o sorteio
+        if(amigos.length>listaAmigosSorteados.length){
+            //função para sortear um nome: criar um índice aleatório e correlacionar com nome na mesma posição no array amigos
+            let resultadoSorteio =  Math.floor(Math.random() * amigos.length);
+                //Verificar se o número sorteado é repetido
+                if(listaAmigosSorteados.includes (resultadoSorteio)){
+                    return sortearAmigo();
+
+                } else {
+                    //se o número sorteado não for repetido seguir com o sorteio
+                    listaAmigosSorteados.push(resultadoSorteio);
+                    amigoSorteado = amigos[resultadoSorteio];
+                    console.log(resultadoSorteio);
+                    console.log(amigoSorteado);
+                    console.log(listaAmigosSorteados);
+                    exibirAmigosSorteado();
+                }    
+        } else {
+            reiniciarSorteio()
+        }
     } else {
         alert ("Nenhum nome foi adicionado. Para sortear, adicione o nome dos seus Amigos!");
-    }
-}
+    }    
+}        
 
 function exibirAmigosSorteado () {
     // função para exibir Nome do Amigo Sorteado Na tela
@@ -66,6 +80,7 @@ function reiniciarSorteio() {
     //função para reiniciar o Jogo
     if(amigos!= ""){
         amigos =[]
+        listaAmigosSorteados =[]
         lista = document.getElementById("listaAmigos");
         lista.innerHTML = "";
         lista = document.getElementById("resultado");
