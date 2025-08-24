@@ -33,7 +33,15 @@ function adicionarAmigo() {
 function exibirAmigos () {
     // função para exibir Nomes de Amigos Na tela
     let lista = document.getElementById("listaAmigos");
-    lista.innerHTML = (amigos);
+    lista.innerHTML = "";
+
+    //loop para inserir um Li a cada novo amigo criado
+    amigos.forEach(item => {
+        const novoLi = document.createElement("li");
+        novoLi.textContent = item;
+        lista.appendChild(novoLi);
+        
+    });
 }
 
 function limparCampoAmigos() {

@@ -164,9 +164,7 @@ ul {
 }
 
 .name-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+   
     margin-top: 15px;
     color: #df056e;
     font-size: 22px;
