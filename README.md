@@ -14,4 +14,13 @@
       <img width="697" height="325" alt="image" src="https://github.com/user-attachments/assets/4a631c9d-3ce4-408c-a72c-cf2333345773" />
       <p>Passo 3: Para inserir novos nomes dos seus amigos basta repetir o passo 1 novamente. Podem ser inseridos quantos nomes desejar. </p>
       <img width="627" height="362" alt="image" src="https://github.com/user-attachments/assets/bc4f226e-64b8-4c70-b336-51b86cecb3f0" />
+      
+<h3>Sorteio dos nomes </h3>
+      <p>Passo 4: Para sortear um dos nomes dos seus amigos, depois de inserir todos os nomes, basta clicar no botão "Sortear Amigo". Abaixo da lista dos amigos irá aparecer a frase mostrando o nome do Amigo sorteado.</p>
+      <img width="633" height="383" alt="image" src="https://github.com/user-attachments/assets/3c722496-0d6f-4adf-8c50-70de50cc1e79" />
+<h3>Reiniciar o Jogo </h3>
+      <p>Passo 5: O sorteio pode ser realizado novamente, dos outros amigos que não foram sorteados ainda, até que todos da lista tenham sido escolhidos. Uma vez que todos forem sorteados, o jogo será reiniciado. Também é possível reiniciar o jogo a qualquer momento, clicando no botão "Reiniciar Jogo" </p>
+      <img width="650" height="332" alt="image" src="https://github.com/user-attachments/assets/66a05949-6fb5-4810-b1bf-5aabb004f571" />
+
+
 
